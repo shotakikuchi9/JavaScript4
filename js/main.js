@@ -33,7 +33,7 @@ btn.addEventListener('click', () => {
     question.textContent = '以下のボタンをクリック';
     btn.textContent = '開始';
   }
-  });
+});
 // 問題表示
 const setQuiz = () => {
   questionNum.textContent = `問題${currentNum+1}`;
