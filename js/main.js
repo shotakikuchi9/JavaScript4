@@ -31,9 +31,9 @@ btn.addEventListener('click', () => {
     score = 0;
     questionNum.textContent = 'ようこそ';
     question.textContent = '以下のボタンをクリック';
-    btn.textContent = '開始';}
+    btn.textContent = '開始';
   }
-)
+  });
 // 問題表示
 const setQuiz = () => {
   questionNum.textContent = `問題${currentNum+1}`;
@@ -46,7 +46,7 @@ const setQuiz = () => {
 const setAnswers = () => {
   while(choices.firstChild) {
     choices.removeChild(choices.firstChild);
-  }
+  };
   const answers = [
     quizSet[currentNum].correct_answer,
     ...quizSet[currentNum].incorrect_answers
@@ -74,9 +74,9 @@ const shuffle = (arr) => {
 // 解答正誤判定
 const checkAnswer = (li) => {
   if (li.textContent === quizSet[currentNum].correct_answer) {
-    score++
+    score++;
   };
-  currentNum++
+  currentNum++;
   if(currentNum === quizSet.length) {
     finishQuiz();
   } else {
