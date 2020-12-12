@@ -35,11 +35,23 @@ btn.addEventListener('click', () => {
   }
 });
 // 問題表示
+class Quiz {
+  constructor(question, category, difficulty, currentNum) {
+    this.question = question;
+    this.category = category;
+    this.difficulty = difficulty;
+    this.currentNum = currentNum;
+    }
+  show() { 
+    question.textContent = this.question;
+    category.textContent = this.category;
+    difficulty.textContent = this.difficulty;
+    questionNum.textContent = this.currentNum;
+  }
+}
 const setQuiz = () => {
-  questionNum.textContent = `問題${currentNum+1}`;
-  question.textContent = quizSet[currentNum].question;
-  category.textContent = `[ジャンル]${quizSet[currentNum].category}`;
-  difficulty.textContent = `[難易度]${quizSet[currentNum].difficulty}`;
+  const newQuiz =  new Quiz(quizSet[currentNum].question, `[ジャンル]${quizSet[currentNum].category}`, `[難易度]${quizSet[currentNum].difficulty}`, `問題${currentNum+1}`);
+  newQuiz.show();
   setAnswers();
 }
 // 選択肢表示
