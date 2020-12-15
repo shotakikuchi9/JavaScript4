@@ -1,0 +1,16 @@
+#question {
+  border-top: 2px solid gainsboro;
+  border-bottom: 2px solid gainsboro;
+  color: dimgray;
+}
+#category {
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+#difficulty {
+  margin-top: 0px;
+  font-size: 20px;
+}
+#choices {
+  list-style: none;
+}
